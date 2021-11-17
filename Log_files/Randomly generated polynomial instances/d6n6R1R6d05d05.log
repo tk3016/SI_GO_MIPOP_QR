@@ -1,0 +1,113 @@
+--- Job d6n6R1R6d05d05 Start 07/19/21 10:30:41 35.1.0 r82a9585 LEX-LEG x86 64bit/Linux
+--- Applying:
+    /rvol/GAMS/gams35.1_linux_x64_64_sfx/gmsprmun.txt
+--- GAMS Parameters defined
+    NLP baron
+    Input /home/ps/ce-fs2/tk3016/WCGO/Full_testing/NLP/random_polynomials/NLP/d6n6R1R6d05d05.gms
+    ScrDir /home/ps/ce-fs2/tk3016/WCGO/Full_testing/NLP/random_polynomials/NLP/225c/
+    SysDir /rvol/GAMS/gams35.1_linux_x64_64_sfx/
+    Trace /home/ps/ce-fs2/tk3016/WCGO/Full_testing/NLP/random_polynomials/NLP/trace.trc
+    TraceOpt 3
+    ResLim 3600
+    OptCR 0.001
+    OptCA 1E-5
+    Threads 24
+Licensee: Medium MUD - 10 User License                   S200525/0001AP-LNX
+          Imperial College London, Centre for Process Systems EngineerDC621
+          /rvol/GAMS/gams35.1_linux_x64_64_sfx/gamslice.txt
+GAMS 35.1.0   Copyright (C) 1987-2021 GAMS Development. All rights reserved
+--- Starting compilation
+--- d6n6R1R6d05d05.gms(49) 2 Mb
+--- Starting execution: elapsed 0:00:00.014
+--- d6n6R1R6d05d05.gms(43) 3 Mb
+--- Generating NLP model m
+--- d6n6R1R6d05d05.gms(48) 5 Mb
+---   7 rows  7 columns  40 non-zeroes
+---   6,890 nl-code  30 nl-non-zeroes
+--- d6n6R1R6d05d05.gms(48) 3 Mb
+--- Executing BARON (Solvelink=2): elapsed 0:00:00.091
+
+GAMS/BARON       35.1.0 r82a9585 Released Apr 29, 2021 LEG x86 64bit/Linux    
+
+===========================================================================
+ BARON version 21.1.13. Built: LNX-64 Wed Jan 13 16:01:25 EST 2021
+
+ BARON is a product of The Optimization Firm.
+ For information on BARON, see https://minlp.com/about-baron
+
+ If you use this software, please cite publications from
+ https://minlp.com/baron-publications, such as: 
+
+ Khajavirad, A. and N. V. Sahinidis,
+ A hybrid LP/NLP paradigm for global optimization relaxations,
+ Mathematical Programming Computation, 10, 383-421, 2018.
+===========================================================================
+ This BARON run may utilize the following subsolver(s)
+ For LP/MIP/QP: ILOG CPLEX                                      
+ For NLP: MINOS, SNOPT, GAMS external NLP, IPOPT, FILTERSD, FILTERSQP
+===========================================================================
+ Doing local search
+ Preprocessing found feasible solution with value  14829.6923517     
+ Solving bounding LP
+ Starting multi-start local search
+ Done with local search
+===========================================================================
+  Iteration    Open nodes         Time (s)    Lower bound      Upper bound
+          1             1             1.16    -2575.51          14829.7    
+        139             7            31.39     82.5382          14829.7    
+        259            14            61.76     447.249          14829.7    
+        355            12            91.86     447.249          14829.7    
+        474            18           122.23     2014.32          14829.7    
+        587            17           152.42     2014.32          14829.7    
+        676            17           183.28     4461.77          14829.7    
+        760            29           213.38     5439.95          14829.7    
+        878            29           243.48     5898.65          14829.7    
+        966            27           273.79     5898.65          14829.7    
+       1077            28           303.87     6026.64          14829.7    
+       1213            31           334.08     6026.64          14829.7    
+       1304            29           364.27     7167.59          14829.7    
+       1423            32           394.32     7387.74          14829.7    
+       1549            30           424.51     7472.20          14829.7    
+       1673            32           454.83     7517.05          14829.7    
+       1763            28           485.24     7517.05          14829.7    
+       1890            31           515.38     7690.66          14829.7    
+       2028            33           545.87     8313.95          14829.7    
+       2154            33           576.51     8313.95          14829.7    
+       2248            38           606.79     8636.28          14829.7    
+       2339            36           636.97     9406.80          14829.7    
+       2440            34           667.03     9809.53          14829.7    
+       2563            31           697.10     9809.53          14829.7    
+       2668            30           727.20     10545.7          14829.7    
+       2830            26           757.25     10545.7          14829.7    
+       2927            25           787.87     11157.7          14829.7    
+       3033            26           817.97     11426.4          14829.7    
+       3175            22           848.18     11426.4          14829.7    
+       3306            15           878.40     11813.4          14829.7    
+       3412            12           908.51     11813.4          14829.7    
+       3548             3           938.58     12333.6          14829.7    
+       3561             0           940.86     14814.9          14829.7    
+
+ Calculating duals
+
+                         *** Normal completion ***            
+
+ Wall clock time:                   941.01
+ Total CPU time used:               938.36
+
+ Total no. of BaR iterations:    3561
+ Best solution found at node:    3352
+ Max. no. of nodes in memory:      43
+ 
+ All done
+===========================================================================
+
+Solution      = 14829.6923471634  found at node 3352
+Best possible = 14814.8774697
+Absolute gap  = 14.8148774634228  optca = 1E-5
+Relative gap  = 0.000999000998578137  optcr = 0.001
+  (Note that BARON uses a different formula to compute the relative gap as
+   was used for the above reported value.)
+
+--- Reading solution for model m
+*** Status: Normal completion
+--- Job d6n6R1R6d05d05.gms Stop 07/19/21 10:46:23 elapsed 0:15:41.445
