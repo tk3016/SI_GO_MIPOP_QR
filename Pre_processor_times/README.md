@@ -1,2 +1,1 @@
-This directory contains the csv files named by the solver configuration of CANON containing the information of the time spent in pre-processing in CANON for all instances considered. 
-Please note the time spent in pre-processing includes the time taken to carry out quadratic reformulation, OBBT, feasibility pumps, PSD cuts and redundant quadratic cuts.
+This directory contains the csv file named 'reformulation_times.csv' which provides the information of the time spent in reformulating in CANON for all instances and all configurations considered in this study. 
