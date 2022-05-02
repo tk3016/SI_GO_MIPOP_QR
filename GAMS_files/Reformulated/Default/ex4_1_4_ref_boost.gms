@@ -1,0 +1,25 @@
+VARIABLE objvar;
+VARIABLES  X0, X2, X1;
+
+EQUATIONS  E1, E2, E3;
+
+E1 ..  - X0 + 4*X2 - 4*X1*X2 + SQR(X2) =E= 0;
+E2 ..  - X2 + SQR(X1) =E= 0;
+E3 .. objvar =E= X0;
+
+
+X0.LO = -167.876445958133;
+X0.UP = 194.1573232142336;
+X2.LO = 0;
+X2.UP = 12.07683640645985;
+X1.LO = 0;
+X1.UP = 3.47517429871652;
+
+
+X1.L = 2;
+
+
+
+
+MODEL canon / ALL /;
+SOLVE canon USING QCP MINIMIZING objvar;

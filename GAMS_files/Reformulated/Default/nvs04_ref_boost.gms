@@ -1,0 +1,29 @@
+VARIABLE objvar;
+VARIABLES  X0, X3;
+
+BINARY VARIABLES  Y1;
+
+INTEGER VARIABLES  Y2;
+
+EQUATIONS  E1, E2, E3;
+
+E1 ..  - X0 - 34.4*Y1 + 28*Y2 + 117*X3 - 240*Y1*Y2 + 240*Y1*X3 + 100*SQR(Y2) - 200*Y2*X3 + 100*SQR(X3) =E= -2.12;
+E2 ..  - X3 + SQR(Y1) =E= 0;
+E3 .. objvar =E= X0;
+
+
+X0.LO = 0;
+X0.UP = 458.3200000000002;
+Y2.UP = 2;
+X3.LO = 0;
+X3.UP = 1;
+
+
+Y1.L = -0;
+Y2.L = -0;
+
+
+
+
+MODEL canon / ALL /;
+SOLVE canon USING MIQCP MINIMIZING objvar;
