@@ -1,0 +1,44 @@
+VARIABLE objvar;
+VARIABLES  X2, X3, X4, X0, X8, X1;
+
+EQUATIONS  E1, E2, E3, E4, E5, E6, E7, E8, E9, E10, E11, E12, E13, E14, E15;
+
+E1 ..  - X2 + 3*X3 + 4*X4 =E= 25;
+E2 ..  - X0 - 2*X3 + X8 + 10*SQR(X4) - 20*X4*X8 + 10*SQR(X8) =E= -1;
+E3 ..  - X1 + X3 - X3*X4 =E= 0;
+E4 ..  - X8 + SQR(X3) =E= 0;
+E5 ..  - 2*X3 + SQR(X3) =G= -1;
+E6 .. 2*X3 + SQR(X3) =G= -1;
+E7 ..  - 2*X4 + SQR(X4) =G= -1;
+E8 .. 2*X4 + SQR(X4) =G= -1;
+E9 ..  - 2*X8 + SQR(X8) =G= -1;
+E10 .. 2*X8 + SQR(X8) =G= -1;
+E11 .. SQR(X3) - 2*X3*X4 + SQR(X4) =G= 0;
+E12 .. SQR(X3) + 2*X3*X4 + SQR(X4) =G= 0;
+E13 .. SQR(X4) - 2*X4*X8 + SQR(X8) =G= 0;
+E14 .. SQR(X4) + 2*X4*X8 + SQR(X8) =G= 0;
+E15 .. objvar =E= X0;
+
+
+X2.LO = -18.00000007612766;
+X2.UP = -17.99999992387234;
+X3.LO = 0.9999999930793042;
+X3.UP = 1.000000006920696;
+X4.LO = 0.9999999861586084;
+X4.UP = 1.000000013841392;
+X0.LO = 0;
+X0.UP = 7.711260997396986e-15;
+X8.LO = 0.9999999861586084;
+X8.UP = 1.000000013841392;
+X1.LO = 0;
+X1.UP = 0;
+
+
+X3.L = 0.9999999989191689;
+X4.L = 1;
+
+
+
+
+MODEL canon / ALL /;
+SOLVE canon USING QCP MINIMIZING objvar;
